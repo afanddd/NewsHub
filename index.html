@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RIZZNEWS - Sumber Berita Terpercaya</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #f9f9f9;
+            --text-color: #333;
+            --card-bg: #fff;
+            --primary-color: #5a67d8;
+            --primary-hover: #434190;
+            --secondary-color: #edf2f7;
+            --secondary-text: #4a5568;
+            --border-color: #e2e8f0;
+            --transition-speed: 0.4s;
+        }
+        [data-theme="dark"] {
+            --bg-color: #1a202c;
+            --text-color: #e2e8f0;
+            --card-bg: #2d3748;
+            --primary-color: #63b3ed;
+            --primary-hover: #3182ce;
+            --secondary-color: #4a5568;
+            --secondary-text: #a0aec0;
+            --border-color: #4a5568;
+        }
+        [data-theme="red"] {
+            --bg-color: #fff5f5;
+            --text-color: #742a2a;
+            --card-bg: #fed7d7;
+            --primary-color: #e53e3e;
+            --primary-hover: #c53030;
+            --secondary-color: #feb2b2;
+            --secondary-text: #742a2a;
+            --border-color: #f56565;
+        }
+        [data-theme="green"] {
+            --bg-color: #f0fff4;
+            --text-color: #276749;
+            --card-bg: #c6f6d5;
+            --primary-color: #48bb78;
+            --primary-hover: #38a169;
+            --secondary-color: #9ae6b4;
+            --secondary-text: #276749;
+            --border-color: #68d391;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            transition: background-color var(--transition-speed), color var(--transition-speed), transform var(--transition-speed);
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding-top: 0; /* Hilangkan padding atas pada body */
+        }
+        header {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem 1rem; /* Kurangi padding agar header tidak terlalu tinggi */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative; /* Header utama tetap di atas dan tidak ikut scroll */
+            width: 100%;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--secondary-color);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky; /* Nav akan mengikuti scroll */
+            top: 0;
+            z-index: 100;
+        }
+        nav .hamburger {
+            position: relative;
+            cursor: pointer;
+        }
+        nav .hamburger-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--secondary-color);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            display: none;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav .hamburger:hover .hamburger-menu {
+            display: block;
+        }
+        nav .hamburger-menu button {
+            display: block;
+            padding: 0.5rem 1rem;
+            background: none;
+            border: none;
+            color: var(--text-color);
+            text-align: left;
+            cursor: pointer;
+            width: 100%;
+        }
+        nav .hamburger-menu button:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        nav select, nav input {
+            padding: 0.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: 5px;
+            font-size: 0.9rem;
+        }
+        nav button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            background: var(--primary-color);
+            color: white;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+        }
+        nav button:hover {
+            background: var(--primary-hover);
+            transform: scale(1.05);
+        }
+        .ad-banner {
+            text-align: center;
+            margin: 1.5rem auto;
+            background: var(--secondary-color);
+            padding: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+        .ad-banner iframe {
+            width: 100%;
+            max-width: 728px;
+            height: auto;
+            border: none;
+        }
+        .articles-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            padding: 2rem;
+            flex: 1;
+        }
+        article {
+            background: var(--card-bg);
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        article img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        article h3 {
+            font-size: 1.2rem;
+            color: var(--primary-hover);
+            margin-bottom: 0.5rem;
+        }
+        article p {
+            font-size: 0.9rem;
+            color: var(--secondary-text);
+            margin-bottom: 1rem;
+        }
+        article a {
+            text-decoration: none;
+            color: white;
+            background: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            transition: background-color var(--transition-speed);
+        }
+        article a:hover {
+            background: var(--primary-hover);
+        }
+        .pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem;
+        }
+        .pagination button {
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background: var(--primary-color);
+            color: white;
+            cursor: pointer;
+            transition: background-color var(--transition-speed), transform var(--transition-speed);
+        }
+        .pagination button.active {
+            background: var(--primary-hover);
+        }
+        .pagination button:hover {
+            transform: scale(1.1);
+        }
+ /* Styling untuk bagian kritik dan saran */
+.feedback-section {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 2rem auto;
+    width: 80%;
+    max-width: 800px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.feedback-section h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.feedback-section p {
+    font-size: 1rem;
+    color: var(--secondary-text);
+    margin-bottom: 1.5rem;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+form input,
+form textarea {
+    padding: 12px 16px;
+    font-size: 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    color: var(--text-color);
+}
+
+/* Focus effect */
+form input:focus,
+form textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px var(--primary-color);
+}
+
+/* Tombol Kirim */
+button[type="submit"] {
+    padding: 12px 24px;
+    font-size: 1rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    align-self: flex-start;
+}
+
+button[type="submit"]:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-3px);
+}
+
+/* Responsif untuk tampilan kecil */
+@media (max-width: 768px) {
+    .feedback-section {
+        width: 90%;
+        padding: 1.5rem;
+    }
+    .feedback-section h2 {
+        font-size: 1.75rem;
+    }
+    form label,
+    form input,
+    form textarea {
+        font-size: 0.9rem;
+    }
+    button[type="submit"] {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Selamat Datang di RIZZNEWS</h1>
+        <p>Update dengan berita dan tren terbaru</p>
+        <!-- Google AdSense Header -->
+        <div class="ad-banner">
+            <iframe src="https://via.placeholder.com/728x90" title="Header Ad"></iframe>
+        </div>
+    </header>
+    <nav>
+        <select id="category-filter" onchange="filterByCategory(event)">
+            <option value="all">Semua Kategori</option>
+            <option value="tech">Teknologi</option>
+            <option value="health">Kesehatan</option>
+            <option value="travel">Perjalanan</option>
+        </select>
+        <input type="text" id="search-input" placeholder="Cari artikel...">
+        <button onclick="searchArticles()">🔍 Cari</button>
+        <div class="hamburger">
+            🌗 Tema
+            <div class="hamburger-menu">
+                <button onclick="toggleTheme('light')">🌞 Terang</button>
+                <button onclick="toggleTheme('dark')">🌙 Gelap</button>
+                <button onclick="toggleTheme('red')">🔴 Merah</button>
+                <button onclick="toggleTheme('green')">🟢 Hijau</button>
+            </div>
+        </div>
+    </nav>
+  <main>
+    <!-- Bagian Artikel -->
+    <section class="articles-section" id="articles-list"></section>
+
+    <!-- Pagination (dipindahkan ke atas bagian kritik dan saran) -->
+    <div class="pagination" id="pagination"></div>
+
+    <!-- Formulir Kritik dan Saran -->
+    <section class="feedback-section">
+        <h2>Kritik dan Saran</h2>
+        <p>Masukkan kritik atau saran Anda untuk membantu kami meningkatkan layanan kami.</p>
+        <!-- Formulir yang menggunakan Formspree -->
+        <form action="https://formspree.io/f/xeoovljq" method="POST" id="feedback-form">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" name="name" placeholder="Masukkan nama Anda" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+
+            <label for="message">Kritik atau Saran:</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tulis kritik atau saran Anda di sini" required></textarea>
+
+            <button type="submit">Kirim</button>
+        </form>
+    </section>
+</main>
+    <footer>
+        <!-- Google AdSense Footer -->
+        <div class="ad-banner">
+            <iframe src="https://via.placeholder.com/728x90" title="Footer Ad"></iframe>
+        </div>
+    </footer>
+
+    <script>
+        // Array berisi data artikel
+        const articlesData = [
+            { 
+                title: 'Inovasi Teknologi 2025', 
+                category: 'tech', 
+                content: 'Menjelajahi prediksi perkembangan teknologi pada tahun 2025, termasuk kecerdasan buatan (AI), IoT, dan kendaraan listrik.', 
+                image: 'https://tse2.mm.bing.net/th?id=OIP.nwBbC5SPQpz1tJD-w3jBWwHaEV&pid=Api', 
+                link: 'Inovasi_Tekno_2025.html' 
+            },
+            { 
+                title: 'Tips Kesehatan 2025', 
+                category: 'health', 
+                content: 'Mulai tahun 2025 dengan langkah hidup sehat untuk mencapai gaya hidup yang lebih bahagia.', 
+                image: 'https://tse2.mm.bing.net/th?id=OIP.N5kFowd7CQxwMX3rpuw2vQHaHa&pid=Api', 
+                link: 'kesehatan.html' 
+            },
+            { 
+                title: 'Destinasi Perjalanan 2025', 
+                category: 'travel', 
+                content: 'Rencanakan petualangan Anda berikutnya dengan panduan destinasi perjalanan unik.', 
+                image: 'https://tse2.mm.bing.net/th?id=OIP.0v0xh_hIiEknsJu1PeTtRQHaE7&pid=Api', 
+                link: 'tunggu.html' 
+            },
+            { 
+                title: 'Teknologi Baru 2025', 
+                category: 'tech', 
+                content: 'Inovasi teknologi seperti jaringan 5G, perangkat IoT, dan kota pintar di tahun 2025.', 
+                image: 'https://tse2.mm.bing.net/th?id=OIP.v5JgrNSyl-fQnZl2ONVp1gHaEf&pid=Api', 
+                link: 'tunggu.html' 
+            },
+            { 
+                title: 'Gaya Hidup Sehat 2025', 
+                category: 'health', 
+                content: 'Tips menjaga pola makan sehat dan gaya hidup aktif untuk meningkatkan kualitas hidup.', 
+                image: 'https://tse1.mm.bing.net/th?id=OIP.TeCz2bN3hwf6TBl31Yj7ZAHaEO&pid=Api', 
+                link: 'tunggu.html' 
+            },
+            { 
+                title: 'Wisata ke Bali 2025', 
+                category: 'travel', 
+                content: 'Panduan lengkap wisata Bali di tahun 2025, termasuk destinasi terbaru dan kuliner lokal.', 
+                image: 'https://tse4.mm.bing.net/th?id=OIP.R8HkIVTT8npL4lB-kU8fuQHaHa&pid=Api', 
+                link: 'tunggu.html' 
+            },
+            { 
+                title: 'Revolusi Teknologi 2025', 
+                category: 'tech', 
+                content: 'Perubahan signifikan di bidang teknologi informasi dengan adopsi AI dan komputasi kuantum.', 
+                image: 'https://tse3.mm.bing.net/th?id=OIP.9SVVYLgG94baSjuIg0oKNAHaEd&pid=Api', 
+                link: 'tunggu.html' 
+            },
+            { 
+                title: 'Kesehatan Mental 2025', 
+                category: 'health', 
+                content: 'Strategi dan pendekatan terbaru untuk menjaga kesehatan mental Anda.', 
+                image: 'https://tse3.mm.bing.net/th?id=OIP.EWWk-NsdvCB5BTYf4pg22gHaHZ&pid=Api', 
+                link: 'tunggu.html' 
+            },
+            { 
+                title: 'Traveling Hemat 2025', 
+                category: 'travel', 
+                content: 'Tips bepergian hemat dan nyaman di tahun 2025 dengan perencanaan anggaran cerdas.', 
+                image: 'https://tse4.mm.bing.net/th?id=OIP.nAR6y4HBf6dIwqX1tz6EuAHaE8&pid=Api', 
+                link: 'tunggu.html' 
+            }
+        ];
+
+        let currentPage = 1;
+        const articlesPerPage = 5;
+        let filteredArticles = [...articlesData];
+
+        // Fungsi untuk menampilkan artikel pada halaman
+        function renderArticles() {
+            const articlesList = document.getElementById('articles-list');
+            const pagination = document.getElementById('pagination');
+            const start = (currentPage - 1) * articlesPerPage;
+            const end = currentPage * articlesPerPage;
+
+            const articlesToRender = filteredArticles.slice(start, end);
+
+            articlesList.innerHTML = articlesToRender.map((article, index) => `
+                <article>
+                    <img src="${article.image}" alt="${article.title}">
+                    <h3>${article.title}</h3>
+                    <p>${article.content}</p>
+                    <a href="${article.link}">Baca Selengkapnya</a>
+                </article>
+                ${index === 2 && end < filteredArticles.length ? `
+                    <!-- Google AdSense Between Articles -->
+                    <div class="ad-banner">
+                        <iframe src="https://via.placeholder.com/300x250" title="Mid Ad"></iframe>
+                    </div>
+                ` : ''}
+            `).join('');
+
+            // Membuat tombol pagination
+            pagination.innerHTML = '';
+            for (let i = 1; i <= Math.ceil(filteredArticles.length / articlesPerPage); i++) {
+                const button = document.createElement('button');
+                button.textContent = i;
+                button.classList.toggle('active', i === currentPage);
+                button.onclick = () => {
+                    currentPage = i;
+                    renderArticles();
+                };
+                pagination.appendChild(button);
+            }
+        }
+
+        // Fungsi untuk mengganti tema dan menyimpan di localStorage
+        function toggleTheme(theme) {
+            document.body.dataset.theme = theme;
+            localStorage.setItem('theme', theme);
+            const menu = document.querySelector('.hamburger-menu');
+            menu.style.display = 'none';
+        }
+
+        // Atur tema saat halaman dimuat berdasarkan localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.body.dataset.theme = savedTheme;
+        });
+
+        // Fungsi untuk memfilter artikel berdasarkan kategori
+        function filterByCategory(event) {
+            const category = event.target.value;
+            filteredArticles = category === 'all'
+                ? [...articlesData]
+                : articlesData.filter(article => article.category === category);
+            currentPage = 1;
+            renderArticles();
+        }
+
+        // Fungsi untuk mencari artikel berdasarkan kata kunci
+        function searchArticles() {
+            const query = document.getElementById('search-input').value.toLowerCase();
+            filteredArticles = articlesData.filter(article =>
+                article.title.toLowerCase().includes(query) ||
+                article.content.toLowerCase().includes(query)
+            );
+            currentPage = 1;
+            renderArticles();
+        }
+
+        // Event listener untuk menampilkan atau menyembunyikan menu tema
+        document.querySelector('.hamburger').addEventListener('click', () => {
+            const menu = document.querySelector('.hamburger-menu');
+            menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        // Menampilkan artikel pertama kali saat halaman dimuat
+        renderArticles();
+    </script>
+</body>
+</html>
