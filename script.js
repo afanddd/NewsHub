@@ -118,7 +118,7 @@ const newsData = [
     },
     {
         title: "Abdul Aziz dilantik Komisioner Jeneral Penjara baharu",
-        link: "https://www.bharian.com.my/berita/nasional/2025/02/1361362/abdul-aziz-dilantik-komisioner-jeneral-penjara-baharu",
+        link: "https://www.bharian.com.my/berita/nasional/2025/02/14/1361362/abdul-aziz-dilantik-komisioner-jeneral-penjara-baharu",
         date: "2025-02-14 10:16:34",
         author: "Hafidzul Hilmi Mohd Noor",
         publisher: "Berita Malaysia",
@@ -297,6 +297,266 @@ const newsData = [
         description: "Jelang AS Roma duel melawan Porto di play-off Liga Europa, Claudio Ranieri melempar peringatan keras ke Paulo Dybala cs.",
         image: "https://asset-1.tstatic.net/img/zoom-in.svg",
         video: ""
+    },
+    {
+        title: "LMKN Gandeng Velodiva Jadi Mitra Pengumpul Royalti secara Digital",
+        link: "https://mediaindonesia.com/hiburan/743897/lmkn-gandeng-velodiva-jadi-mitra-pengumpul-royalti-secara-digital",
+        date: "2025-02-14 16:08:00",
+        author: "Siti Retno Wulandari",
+        publisher: "Mediaindonesia",
+        country: "Indonesia",
+        category: "Top",
+        language: "Indonesian",
+        description: "Dalam klaimnya, Velodiva akan menghadirkan sistem pencatatan terpadu yang terintegrasi dengan sistem distribusi royalti LMKN bagi para pencipta lagu dan pemilik hak terkait",
+        image: "",
+        video: ""
+    },
+    {
+        title: "Di manakah pertemuan Modi dan Musk meninggalkan rancangan India Starlink?",
+        link: "https://invezz.com/ms/berita/2025/02/14/di-manakah-pertemuan-modi-dan-musk-meninggalkan-rancangan-india-starlink/",
+        date: "2025-02-14 15:51:41",
+        author: "Vatsala Gaur",
+        publisher: "Invezz",
+        country: "United Kingdom",
+        category: "Business",
+        language: "Indonesian",
+        description: "Semasa lawatannya ke AS, Perdana Menteri India Narendra Modi bertemu dengan CEO SpaceX dan Tesla, Elon Musk untuk meneroka kerjasama teknologi yang berkembang antara India dan Amerika Syarikat. :Perdana Menteri dan Encik Musk membincangkan pengukuhan kerjasama antara entiti India dan AS dalam inovasi, penerokaan angkasa lepas, kecerdasan buatan dan pembangunan mampan,” kata kementerian hal ehwal [...]",
+        image: "https://ik.imagekit.io/invezz/uploads/2025/02/modi-musk-scaled.jpeg",
+        video: ""
+    },
+    {
+        title: "BPKA dan USK Kerja Sama Kembangkan Prototipe Aplikasi Pembayaran Mobile e-Samsat Aceh ‘Seudati’",
+        link: "https://aceh.tribunnews.com/2025/02/14/bpka-dan-usk-kerja-sama-kembangkan-prototipe-aplikasi-pembayaran-mobile-e-samsat-aceh-seudati",
+        date: "2025-02-14 15:43:45",
+        author: "",
+        publisher: "Tribun News",
+        country: "Indonesia",
+        category: "Top",
+        language: "Indonesian",
+        description: "Aplikasi ini dirancang untuk meningkatkan kemudahan dan efisiensi dalam proses pembayaran Pajak Kendaraan Bermotor...",
+        image: "https://asset-2.tstatic.net/aceh/foto/bank/images/e-Samsat-Aceh-Seudati.jpg",
+        video: ""
+    },
+    {
+        title: "Perusahaan Malaysia Sasar Indonesia Lewat AI di Layanan Keuangan",
+        link: "https://www.liputan6.com/bisnis/read/5922115/perusahaan-malaysia-sasar-indonesia-lewat-ai-di-layanan-keuangan",
+        date: "2025-02-14 15:41:01",
+        author: "",
+        publisher: "Liputan6",
+        country: "Indonesia",
+        category: "Business",
+        language: "Indonesian",
+        description: "Dengan arsitektur yang berbasis cloud dan composable, teknologi ini juga memungkinkan institusi keuangan untuk berkembang lebih fleksibel, efisien, dan tetap mematuhi standar keamanan serta regulasi industri.",
+        image: "https://cdn0-production-images-kly.akamaized.net/jpagci9KBgnOliG3l6vXdP8xjFw=/673x379/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5107459/original/086283800_1737682639-ai-7111802_1280.jpg",
+        video: ""
+    },
+    {
+        title: "Pembuat Pemadam Api untuk Mobil Listrik Kembangkan APAR Khusus untuk Kapal Wisata",
+        link: "https://mediaindonesia.com/otomotif/743892/pembuat-pemadam-api-untuk-mobil-listrik-kembangkan-apar-khusus-untuk-kapal-wisata",
+        date: "2025-02-14 15:39:00",
+        author: "denny Parsaulian Sinaga",
+        publisher: "Mediaindonesia",
+        country: "Indonesia",
+        category: "Top",
+        language: "Indonesian",
+        description: "Acara ini juga dihadiri berbagai pemangku kepentingan terkait keselamatan yaitu KSOP, Kapolres, Danlanal, Basarnas juga berbagai Asosiasi pemilik kapal di Bajo.",
+        image: "",
+        video: ""
+    },
+    {
+        title: "Dukung Program MBG, Yakult Gelar Seminar Shokuiku, Kenalkan Pola Makan Siang di Sekolah Jepang",
+        link: "https://aceh.tribunnews.com/2025/02/14/dukung-program-mbg-yakult-gelar-seminar-shokuiku-kenalkan-pola-makan-siang-di-sekolah-jepang",
+        date: "2025-02-14 15:38:57",
+        author: "",
+        publisher: "Tribun News",
+        country: "Indonesia",
+        category: "Top",
+        language: "Indonesian",
+        description: "PT Yakult Indonesia Persada secara khusus menghadirkan pembicara Prof Naomi Aiba dari Kanagawa University Jepang yang...",
+        image: "https://asset-1.tstatic.net/img/zoom-in.svg",
+        video: ""
+    },
+    {
+        title: "Anggota Komisi VI DPR Nilai Pemangkasan Anggaran Fasilitas Pimpinan BUMN Sudah Tepat",
+        link: "https://mediaindonesia.com/ekonomi/743889/-anggota-komisi-vi-dpr-nilai-pemangkasan-anggaran-fasilitas-pimpinan-bumn-sudah-tepat",
+        date: "2025-02-14 15:36:00",
+        author: "Akmal Fauzi",
+        publisher: "Mediaindonesia",
+        country: "Indonesia",
+        category: "Top",
+        language: "Indonesian",
+        description: "ANGGOTA Komisi VI DPR Mufti Anam menilai langkah Menteri Badan Usaha Milik Negara (BUMN) Erick Thohir memangkas anggaran fasilitas pimpinan BUMN hingga 70% sudah tepat.",
+        image: "",
+        video: ""
+    },
+    {
+        title: "Gelar RUPS, ASABRI Komitmen Lanjutkan Transformasi",
+        link: "https://www.liputan6.com/bisnis/read/5922102/gelar-rups-asabri-komitmen-lanjutkan-transformasi",
+        date: "2025-02-14 15:26:41",
+        author: "",
+        publisher: "Liputan6",
+        country: "Indonesia",
+        category: "Business",
+        language: "Indonesian",
+        description: "PT ASABRI (Persero) menyelenggarakan Rapat Umum Pemegang Saham (RUPS) di Kementerian BUMN.",
+        image: "https://cdn0-production-images-kly.akamaized.net/4_cGgXW4uWN1Oguyp4gDZO_hVS0=/673x379/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3022804/original/034250800_1579080494-1.jpg",
+        video: ""
+    },
+    {
+        title: "Mantan Bos Google Takut AI Dipakai Teroris Bikin Senjata",
+        link: "https://inet.detik.com/cyberlife/d-7779014/mantan-bos-google-takut-ai-dipakai-teroris-bikin-senjata",
+        date: "2025-02-14 15:10:30",
+        author: "",
+        publisher: "Detik",
+        country: "Indonesia",
+        category: "Technology",
+        language: "Indonesian",
+        description: "Mantan CEO Google Eric Schmidt khawatir AI dapat disalahgunakan teroris dan negara jahat untuk melukai orang-orang tidak bersalah.",
+        image: "https://akcdn.detik.net.id/community/media/visual/2018/09/24/91f64632-5b64-4025-9111-c5e85fdea90d_169.jpeg?q=90&w=360",
+        video: ""
+    },
+    {
+        title: "Pemerintah dan Swasta Diminta Perkuat Kolaborasi Guna Melindungi Masa Depan Ekonomi Digital Indonesia",
+        link: "https://mediaindonesia.com/teknologi/743881/pemerintah-dan-swasta-diminta-perkuat-kolaborasi-guna-melindungi-masa-depan-ekonomi-digital-indonesia",
+        date: "2025-02-14 15:01:00",
+        author: "Basuki Eka Purnama",
+        publisher: "Mediaindonesia",
+        country: "Indonesia",
+        category: "Top",
+        language: "Indonesian",
+        description: "Dalam menghadapi ancaman keamanan siber (cyber threats) Indonesia perlu memperkuat kolaborasi antara pemerintah dan dunia usaha.",
+        image: "",
+        video: ""
+    },
+    {
+        title: "Kiat Menggunakan Sosial Media Secara Sehat",
+        link: "https://prokalteng.jawapos.com/prostyle/lifestyle/14/02/2025/kiat-menggunakan-sosial-media-secara-sehat/",
+        date: "2025-02-14 15:50:20",
+        author: "",
+        publisher: "Prokalteng",
+        country: "Indonesia",
+        category: "Lifestyle",
+        language: "Indonesian",
+        description: "Sosial media merupakan makanan sehari-hari bagi para manusia di Bumi saat ini. Banyak mereka yang tidak bisa hidup tanpa menggunakan social media.",
+        image: "https://prokalteng.jawapos.com/wp-content/uploads/2025/02/14_Sosmed.jpg",
+        video: ""
+    },
+    {
+        title: "BPA di Galon Guna Ulang Bisa Picu Kanker, Ini Buktinya",
+        link: "https://health.detik.com/berita-detikhealth/d-7779164/bpa-di-galon-guna-ulang-bisa-picu-kanker-ini-buktinya",
+        date: "2025-02-14 15:00:51",
+        author: "",
+        publisher: "Detik",
+        country: "Indonesia",
+        category: "Health",
+        language: "Indonesian",
+        description: "BPA adalah senyawa kimia umum dalam plastik yang berisiko memicu kanker. Penelitian menunjukkan hubungan antara BPA dan kanker payudara serta prostat.",
+        image: "https://akcdn.detik.net.id/community/media/visual/2021/03/26/ilustrasi-galon-air-mineral-1_169.jpeg?q=90&w=360",
+        video: ""
+    },
+    {
+        title: "Pakar UGM: Bantuan Amerika USAID Ditutup, Peneliti di Bidang Kesehatan harus lebih Kreatif Cari Pendanaan Riset",
+        link: "https://mediaindonesia.com/humaniora/743879/pakar-ugm-bantuan-amerika-usaid-ditutup-peneliti-di-bidang-kesehatan-harus-lebih-kreatif-cari-pendanaan-riset",
+        date: "2025-02-14 15:00:00",
+        author: "indrastuti",
+        publisher: "Mediaindonesia",
+        country: "Indonesia",
+        category: "Top",
+        language: "Indonesian",
+        description: "Kemenkes: pencegahan dan pengendalian penyakit tropis memerlukan sinergi global.",
+        image: "",
+        video: ""
+    },
+    {
+        title: "Sertifikat Green Building Level Gold Jadi Bukti Nyata Komitmen Keberlanjutan",
+        link: "https://mediaindonesia.com/humaniora/743868/sertifikat-green-building-level-gold-jadi-bukti-nyata-komitmen-keberlanjutan",
+        date: "2025-02-14 14:46:00",
+        author: "indrastuti",
+        publisher: "Mediaindonesia",
+        country: "Indonesia",
+        category: "Top",
+        language: "Indonesian",
+        description: "Sertifikasi ini mencerminkan dedikasi dalam mengadopsi standar bangunan hijau dan menjadi inspirasi bagi industri telekomunikasi di Indonesia.",
+        image: "",
+        video: ""
+    },
+    {
+        title: "Seruan Kabur Aja Dulu Viral, Bentuk Protes Anak Muda yang Merasa Tak Punya Kuasa",
+        link: "https://www.liputan6.com/health/read/5922002/seruan-kabur-aja-dulu-viral-bentuk-protes-anak-muda-yang-merasa-tak-punya-kuasa",
+        date: "2025-02-14 13:41:10",
+        author: "",
+        publisher: "Liputan6",
+        country: "Indonesia",
+        category: "Health",
+        language: "Indonesian",
+        description: "Bukan sekadar kabur tapi seruan tagar Kabur Aja Dulu bentuk protes dan kekecewaan terhadap situasi negara yang tidak baik-baik saja.",
+        image: "https://cdn1-production-images-kly.akamaized.net/TL8voMpjwK0eCPMEOHnp8TAzcNc=/673x379/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4570453/original/038488400_1694399062-michal-parzuchowski-xFItahF3CY4-unsplash.jpg",
+        video: ""
+    },
+    {
+        title: "IWIP Ikut Ramaikan Bulan K3 Nasional",
+        link: "https://finance.detik.com/berita-ekonomi-bisnis/d-7779044/iwip-ikut-ramaikan-bulan-k3-nasional",
+        date: "2025-02-14 13:00:58",
+        author: "",
+        publisher: "Detik",
+        country: "Indonesia",
+        category: "Business",
+        language: "Indonesian",
+        description: "IWIP merayakan Bulan K3 Nasional 2025 dengan berbagai kegiatan untuk meningkatkan kesadaran K3 di kalangan karyawan dan kontraktor.",
+        image: "https://akcdn.detik.net.id/community/media/visual/2025/02/14/iwip-ikut-ramaikan-bulan-k3-nasional_169.jpeg?q=90&w=360",
+        video: ""
+    },
+    {
+        title: "Berapa Banyak Kalori yang Dibakar Saat Tidur Malam? Begini Penjelasannya",
+        link: "https://health.detik.com/berita-detikhealth/d-7779073/berapa-banyak-kalori-yang-dibakar-saat-tidur-malam-begini-penjelasannya",
+        date: "2025-02-14 13:00:30",
+        author: "",
+        publisher: "Detik",
+        country: "Indonesia",
+        category: "Health",
+        language: "Indonesian",
+        description: "Tahukah bahwa tubuh membakar kalori saat tidur? Rata-rata, sekitar 50 kalori per jam. Temukan cara meningkatkan kualitas tidur dan kalori yang terbakar!",
+        image: "https://akcdn.detik.net.id/community/media/visual/2024/09/01/ilustrasi-pria-tidur_169.jpeg?q=90&w=360",
+        video: ""
+    },
+    {
+        title: "Ikut Tren Kabur Aja Dulu tapi Kehidupan di Luar Negeri Tak Sesuai Ekspektasi, Ini Dampak Psikologisnya",
+        link: "https://www.liputan6.com/health/read/5921906/ikut-tren-kabur-aja-dulu-tapi-kehidupan-di-luar-negeri-tak-sesuai-ekspektasi-ini-dampak-psikologisnya",
+        date: "2025-02-14 12:57:41",
+        author: "",
+        publisher: "Liputan6",
+        country: "Indonesia",
+        category: "Health",
+        language: "Indonesian",
+        description: "Tagar Kabur Aja Dulu menggema di media sosial. Namun, bagaimana bila sudah ke luar negeri tapi mendapati realita baru yang tidak sesuai harapan?",
+        image: "https://cdn1-production-images-kly.akamaized.net/VT4XLKi_U9YD8WPfbwGOIvSmIXQ=/0x0:4032x2268/673x379/filters:quality(75):strip_icc():format(webp):watermark(kly-media-production/assets/images/watermarks/liputan6/watermark-color-landscape-new.png,573,20,0)/kly-media-production/medias/5133420/original/009462600_1739536018-123b2aa9-c1b3-437d-bedc-389eb2618598.jpg",
+        video: ""
+    },
+    {
+        title: "Daftar Lagu Green Day yang Hits dan Liriknya, Hafalkan Buat Nonton Konser Hammersonic Jakarta 2025",
+        link: "https://www.suara.com/entertainment/2025/02/14/185411/daftar-lagu-green-day-yang-hits-dan-liriknya-hafalkan-buat-nonton-konser-hammersonic-jakarta-2025",
+        date: "2025-02-14 11:54:11",
+        author: "",
+        publisher: "Suara",
+        country: "Indonesia",
+        category: "Entertainment",
+        language: "Indonesian",
+        description: "",
+        image: "https://media.suara.com/pictures/653x366/2021/09/01/63245-green-day.jpg",
+        video: ""
+    },
+    {
+        title: "Bak Dua Mata Pisau, Psikolog Ungkap Sisi Positif dan Negatif Tagar Kabur Aja Dulu",
+        link: "https://www.liputan6.com/health/read/5921835/bak-dua-mata-pisau-psikolog-ungkap-sisi-positif-dan-negatif-tagar-kabur-aja-dulu",
+        date: "2025-02-14 11:33:05",
+        author: "",
+        publisher: "Liputan6",
+        country: "Indonesia",
+        category: "Health",
+        language: "Indonesian",
+        description: "Menurut Psikolog Klinis, Fifi Pramudika, tagar “Kabur Aja Dulu” layaknya dua mata pisau. Artinya, ada sisi positif dan negatifnya.",
+        image: "https://cdn1-production-images-kly.akamaized.net/w6cKhdv7nydw1ZA4OIx33s8CVm0=/0x0:4032x2268/673x379/filters:quality(75):strip_icc():format(webp):watermark(kly-media-production/assets/images/watermarks/liputan6/watermark-color-landscape-new.png,573,20,0)/kly-media-production/medias/5133374/original/001637600_1739532504-e33e3d74-3987-41ac-ab22-1f27f3635792.jpg",
+        video: ""
     }
 ];
 
@@ -304,65 +564,58 @@ const newsData = [
 const itemsPerPage = 5;
 let currentPage = 1;
 let isLoading = false;
+let currentTheme = localStorage.getItem('theme') || 'light';
 
-// Fungsi utama untuk menampilkan berita
+// Fungsi untuk menampilkan berita
 function displayNews(category = "all", searchQuery = "", page = 1, append = false) {
     const newsContainer = document.getElementById('news-container');
     const loading = document.getElementById('loading');
     
     if (!append) {
         newsContainer.innerHTML = "";
-        loading.classList.remove('hidden');
+        window.scrollTo(0, 0);
     }
 
-    // Filter berita
-    const filteredNews = newsData.filter(news => {
-        const matchesCategory = category === "all" || news.category === category;
-        const matchesSearch = news.title.toLowerCase().includes(searchQuery.toLowerCase());
-        return matchesCategory && matchesSearch;
-    });
+    loading.classList.remove('hidden');
 
-    // Simulasi loading
+    // Simulasi loading dengan timeout
     setTimeout(() => {
-        loading.classList.add('hidden');
-        
+        const filteredNews = newsData.filter(news => {
+            const matchesCategory = category === "all" || news.category === category;
+            const matchesSearch = news.title.toLowerCase().includes(searchQuery.toLowerCase());
+            return matchesCategory && matchesSearch;
+        });
+
+        const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
+
         if (filteredNews.length === 0) {
-            if (!append) newsContainer.innerHTML = `<p class="no-news">Tidak ada berita yang ditemukan.</p>`;
+            if (!append) {
+                newsContainer.innerHTML = `<p class="no-news">Tidak ada berita yang ditemukan.</p>`;
+            }
             renderPagination(0);
             return;
         }
 
-        // Pagination
-        const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
         const startIndex = (page - 1) * itemsPerPage;
         const endIndex = startIndex + itemsPerPage;
         const paginatedNews = filteredNews.slice(startIndex, endIndex);
 
-        // Render berita
         paginatedNews.forEach((news, index) => {
-            // Tambahkan iklan setelah 2 berita
             if (index === 2) {
                 newsContainer.innerHTML += `
                     <div class="ad-container ad-in-article">
-                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929235380686780"
-                            crossorigin="anonymous"></script>
-                        <ins class="adsbygoogle"
-                            style="display:block; text-align:center;"
-                            data-ad-layout="in-article"
-                            data-ad-format="fluid"
-                            data-ad-client="ca-pub-9929235380686780"
-                            data-ad-slot="5678901234"></ins>
-                        <script>
-                            (adsbygoogle = window.adsbygoogle || []).push({});
-                        </script>
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929235380686780" crossorigin="anonymous"></script>
+                        <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-9929235380686780" data-ad-slot="5678901234"></ins>
+                        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                     </div>
                 `;
             }
 
             const newsItem = document.createElement('div');
             newsItem.classList.add('news-item');
-            newsItem.innerHTML = `
-                ${news.image ? `<img src="${news.image}" alt="${news.title}" loading="lazy">` : ''}
+            const newsImage = news.image ? `<img src="${news.image}" alt="${news.title}" loading="lazy">` : '<div class="image-placeholder">Tidak ada gambar</div>';
+            const newsContent = `
+                ${newsImage}
                 <div class="content">
                     <h2>${news.title}</h2>
                     <p>${news.description}</p>
@@ -371,127 +624,180 @@ function displayNews(category = "all", searchQuery = "", page = 1, append = fals
                     <p><strong>Kategori:</strong> ${news.category}</p>
                     <a href="${news.link}" target="_blank">Baca selengkapnya</a>
                     <div class="share-buttons">
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(news.link)}" 
-                           target="_blank" 
-                           class="share-facebook">Facebook</a>
-                        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(news.title)}&url=${encodeURIComponent(news.link)}" 
-                           target="_blank" 
-                           class="share-twitter">Twitter</a>
-                        <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(news.title + " " + news.link)}" 
-                           target="_blank" 
-                           class="share-whatsapp">WhatsApp</a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(news.link)}" target="_blank" class="share-facebook">Facebook</a>
+                        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(news.title)}&url=${encodeURIComponent(news.link)}" target="_blank" class="share-twitter">Twitter</a>
+                        <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(news.title + " " + news.link)}" target="_blank" class="share-whatsapp">WhatsApp</a>
                     </div>
                 </div>
             `;
+            newsItem.innerHTML = newsContent;
             newsContainer.appendChild(newsItem);
         });
 
         renderPagination(totalPages, page);
-    }, 500); // Simulasi loading 0.5 detik
+        loading.classList.add('hidden');
+    }, 500);
 }
 
-// Fungsi pagination
+// Fungsi untuk merender tombol pagination
 function renderPagination(totalPages, currentPage = 1) {
-    const pagination = document.getElementById('pagination');
-    pagination.innerHTML = "";
+    const paginationContainer = document.getElementById('pagination');
+    paginationContainer.innerHTML = "";
 
     if (totalPages <= 1) return;
 
-    // Tombol Previous
     const prevButton = document.createElement('button');
     prevButton.textContent = "Sebelumnya";
     prevButton.disabled = currentPage === 1;
     prevButton.addEventListener('click', () => {
-        handlePagination(currentPage - 1);
+        const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
+        const searchQuery = document.getElementById('search-input').value;
+        displayNews(activeCategory, searchQuery, currentPage - 1);
     });
-    pagination.appendChild(prevButton);
+    paginationContainer.appendChild(prevButton);
 
-    // Nomor halaman
-    for (let i = 1; i <= totalPages; i++) {
-        const button = document.createElement('button');
-        button.textContent = i;
-        if (i === currentPage) button.classList.add('active');
-        button.addEventListener('click', () => handlePagination(i));
-        pagination.appendChild(button);
+    const maxPagesToShow = 5;
+    let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
+    let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
+
+    if (endPage - startPage + 1 < maxPagesToShow) {
+        startPage = Math.max(1, endPage - maxPagesToShow + 1);
     }
 
-    // Tombol Next
+    for (let i = startPage; i <= endPage; i++) {
+        const button = document.createElement('button');
+        button.textContent = i;
+        if (i === currentPage) {
+            button.classList.add('active');
+        }
+        button.addEventListener('click', () => {
+            const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
+            const searchQuery = document.getElementById('search-input').value;
+            displayNews(activeCategory, searchQuery, i);
+        });
+        paginationContainer.appendChild(button);
+    }
+
     const nextButton = document.createElement('button');
     nextButton.textContent = "Selanjutnya";
     nextButton.disabled = currentPage === totalPages;
     nextButton.addEventListener('click', () => {
-        handlePagination(currentPage + 1);
+        const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
+        const searchQuery = document.getElementById('search-input').value;
+        displayNews(activeCategory, searchQuery, currentPage + 1);
     });
-    pagination.appendChild(nextButton);
+    paginationContainer.appendChild(nextButton);
 }
 
-// Handler pagination
-function handlePagination(newPage) {
-    currentPage = newPage;
-    const activeCategory = document.querySelector('.active[data-category]')?.dataset.category || "all";
-    const searchQuery = document.getElementById('search-input').value;
-    displayNews(activeCategory, searchQuery, currentPage);
+// Event listener untuk menu toggle
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    const nav = document.getElementById('main-nav');
+    nav.classList.toggle('active');
+});
+
+// Event listener untuk kategori
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const category = e.target.getAttribute('data-category');
+        setActiveCategory(category);
+        currentPage = 1;
+        displayNews(category);
+    });
+});
+
+// Fungsi untuk mengatur kategori aktif
+function setActiveCategory(category) {
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => link.classList.remove('active'));
+    const activeLink = document.querySelector(`nav ul li a[data-category="${category}"]`);
+    if (activeLink) activeLink.classList.add('active');
 }
 
-// Search handler
+// Event listener untuk pencarian
 document.getElementById('search-button').addEventListener('click', () => {
-    currentPage = 1;
     const searchQuery = document.getElementById('search-input').value;
-    const activeCategory = document.querySelector('.active[data-category]')?.dataset.category || "all";
+    const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
+    currentPage = 1;
     displayNews(activeCategory, searchQuery, currentPage);
 });
 
-// Infinite scroll
+// Event listener untuk input pencarian (real-time)
+const searchInput = document.getElementById('search-input');
+let searchTimeout;
+
+searchInput.addEventListener('input', (e) => {
+    clearTimeout(searchTimeout);
+    searchTimeout = setTimeout(() => {
+        const activeCategory = document.querySelector('nav ul li a.active')?.dataset.category || "all";
+        currentPage = 1;
+        displayNews(activeCategory, e.target.value.trim());
+    }, 300);
+});
+
+// Event listener untuk infinite scroll
+let lastScroll = 0;
 window.addEventListener('scroll', () => {
-    if (isLoading) return;
+    const currentScroll = window.pageYOffset;
+    
+    if (Math.abs(currentScroll - lastScroll) < 100) return;
     
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    if (scrollTop + clientHeight >= scrollHeight - 10) {
+    
+    if (scrollTop + clientHeight >= scrollHeight - 500 && !isLoading) {
         isLoading = true;
         currentPage++;
-        const searchQuery = document.getElementById('search-input').value;
-        const activeCategory = document.querySelector('.active[data-category]')?.dataset.category || "all";
-        displayNews(activeCategory, searchQuery, currentPage, true);
-        isLoading = false;
+        loadMoreNews();
     }
+    
+    lastScroll = currentScroll;
 });
 
-// Dark mode toggle
+function loadMoreNews() {
+    const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
+    const searchQuery = document.getElementById('search-input').value;
+    displayNews(activeCategory, searchQuery, currentPage, true);
+    isLoading = false;
+}
+
+// Event listener untuk dark mode
 document.getElementById('theme-toggle').addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
+    currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', currentTheme);
+    updateTheme();
 });
 
-// Back to top button
+// Fungsi untuk update tema
+function updateTheme() {
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-mode');
+        document.getElementById('theme-toggle').textContent = '☀️';
+    } else {
+        document.body.classList.remove('dark-mode');
+        document.getElementById('theme-toggle').textContent = '🌙';
+    }
+}
+
+// Event listener untuk back to top button
 window.addEventListener('scroll', () => {
-    const backToTop = document.getElementById('back-to-top');
-    backToTop.classList.toggle('visible', window.scrollY > 300);
+    const backToTopButton = document.getElementById('back-to-top');
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+    } else {
+        backToTopButton.classList.remove('visible');
+    }
 });
 
 document.getElementById('back-to-top').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Hamburger menu
-document.getElementById('menu-toggle').addEventListener('click', () => {
-    document.getElementById('main-nav').classList.toggle('active');
-});
-
-// Kategori handler
-document.querySelectorAll('[data-category]').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        document.querySelectorAll('[data-category]').forEach(l => l.classList.remove('active'));
-        e.target.classList.add('active');
-        currentPage = 1;
-        displayNews(e.target.dataset.category);
-    });
-});
-
 // Inisialisasi AdSense
 (adsbygoogle = window.adsbygoogle || []).push({});
 
-// Jalankan saat pertama kali load
+// Jalankan fungsi saat halaman dimuat
 window.onload = () => {
     displayNews();
-    document.querySelector('[data-category="all"]').classList.add('active');
+    setActiveCategory("all");
+    updateTheme();
 };
