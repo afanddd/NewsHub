@@ -2,77 +2,55 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta name="description" content="Website berita terkini dengan berbagai kategori seperti bisnis, teknologi, olahraga, dan top news.">
     <meta name="keywords" content="berita, bisnis, teknologi, olahraga, top news">
     <title>Website Berita</title>
     <link rel="stylesheet" href="styles.css">
-    
-    <!-- Kode AdSense Anda -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929235380686780"
-        crossorigin="anonymous"></script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929235380686780" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
         <h1>NewsHub</h1>
-        <button id="menu-toggle">☰</button>
-        <nav id="main-nav">
+        <button id="menu-toggle" aria-label="Toggle menu">☰</button>
+        <nav id="main-nav" aria-label="Main navigation">
             <ul>
-                <li><a href="#" data-category="all">Semua</a></li>
+                <li><a href="#" data-category="all" aria-current="page">Semua</a></li>
                 <li><a href="#" data-category="Business">Bisnis</a></li>
                 <li><a href="#" data-category="Technology">Teknologi</a></li>
                 <li><a href="#" data-category="Sports">Olahraga</a></li>
                 <li><a href="#" data-category="Top">Top News</a></li>
+                <li><a href="#" data-category="Health">Kesehatan</a></li>
+                <li><a href="#" data-category="Entertainment">Hiburan</a></li>
+                <li><a href="#" data-category="Lifestyle">Gaya Hidup</a></li>
             </ul>
         </nav>
         <div class="search-container">
-            <input type="text" id="search-input" placeholder="Cari berita...">
-            <button id="search-button">Cari</button>
+            <input type="text" id="search-input" placeholder="Cari berita..." aria-label="Search news">
+            <button id="search-button" aria-label="Search">Cari</button>
         </div>
-        <button id="theme-toggle">🌙</button>
+        <button id="theme-toggle" aria-label="Toggle theme">🌙</button>
     </header>
 
-    <!-- Iklan Header -->
     <div class="ad-container ad-header">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929235380686780"
-            crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-9929235380686780"
-            data-ad-slot="1234567890" <!-- Ganti dengan slot iklan Anda -->
-            data-ad-format="auto"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929235380686780" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9929235380686780" data-ad-slot="1234567890" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
     <main>
         <div id="loading" class="hidden">Memuat...</div>
-        <div id="news-container">
-            <!-- Berita akan dimuat di sini menggunakan JavaScript -->
-        </div>
-        <div id="pagination">
-            <!-- Tombol pagination akan dimuat di sini -->
-        </div>
+        <div id="news-container"></div>
+        <div id="pagination"></div>
     </main>
 
-    <!-- Iklan Footer -->
     <div class="ad-container ad-footer">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929235380686780"
-            crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-            style="display:block"
-            data-ad-client="ca-pub-9929235380686780"
-            data-ad-slot="9876543210" <!-- Ganti dengan slot iklan Anda -->
-            data-ad-format="autorelaxed"
-            data-full-width-responsive="true"></ins>
-        <script>
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929235380686780" crossorigin="anonymous"></script>
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-9929235380686780" data-ad-slot="9876543210" data-ad-format="autorelaxed" data-full-width-responsive="true"></ins>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
     </div>
 
-    <button id="back-to-top" class="hidden">↑</button>
+    <button id="back-to-top" class="hidden" aria-label="Back to top">↑</button>
     <footer>
         <p>&copy; 2025 Website Berita. All rights reserved.</p>
     </footer>
