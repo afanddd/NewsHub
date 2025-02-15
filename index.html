@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Website berita terkini dengan berbagai kategori seperti bisnis, teknologi, olahraga, dan top news.">
+    <meta name="keywords" content="berita, bisnis, teknologi, olahraga, top news">
+    <title>Website Berita</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>NewsHub</h1>
+        <button id="menu-toggle">☰</button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="#" data-category="all">Semua</a></li>
+                <li><a href="#" data-category="Business">Bisnis</a></li>
+                <li><a href="#" data-category="Technology">Teknologi</a></li>
+                <li><a href="#" data-category="Sports">Olahraga</a></li>
+                <li><a href="#" data-category="Top">Top News</a></li>
+            </ul>
+        </nav>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Cari berita...">
+            <button id="search-button">Cari</button>
+        </div>
+        <button id="theme-toggle">🌙</button>
+    </header>
+    <main>
+        <div id="loading" class="hidden">Memuat...</div>
+        <div id="news-container">
+            <!-- Berita akan dimuat di sini menggunakan JavaScript -->
+        </div>
+        <div id="pagination">
+            <!-- Tombol pagination akan dimuat di sini -->
+        </div>
+    </main>
+    <button id="back-to-top" class="hidden">↑</button>
+    <footer>
+        <p>&copy; 2025 Website Berita. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
