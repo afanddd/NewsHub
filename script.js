@@ -300,224 +300,198 @@ const newsData = [
     }
 ];
 
-// Konfigurasi pagination
+// Konfigurasi
 const itemsPerPage = 5;
 let currentPage = 1;
 let isLoading = false;
 
-// Fungsi untuk menampilkan berita
+// Fungsi utama untuk menampilkan berita
 function displayNews(category = "all", searchQuery = "", page = 1, append = false) {
     const newsContainer = document.getElementById('news-container');
+    const loading = document.getElementById('loading');
+    
     if (!append) {
         newsContainer.innerHTML = "";
+        loading.classList.remove('hidden');
     }
 
+    // Filter berita
     const filteredNews = newsData.filter(news => {
         const matchesCategory = category === "all" || news.category === category;
         const matchesSearch = news.title.toLowerCase().includes(searchQuery.toLowerCase());
         return matchesCategory && matchesSearch;
     });
 
-    const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
-
-    if (filteredNews.length === 0) {
-        if (!append) {
-            newsContainer.innerHTML = `<p class="no-news">Tidak ada berita yang ditemukan.</p>`;
+    // Simulasi loading
+    setTimeout(() => {
+        loading.classList.add('hidden');
+        
+        if (filteredNews.length === 0) {
+            if (!append) newsContainer.innerHTML = `<p class="no-news">Tidak ada berita yang ditemukan.</p>`;
+            renderPagination(0);
+            return;
         }
-        renderPagination(0);
-        return;
-    }
 
-    const startIndex = (page - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const paginatedNews = filteredNews.slice(startIndex, endIndex);
+        // Pagination
+        const totalPages = Math.ceil(filteredNews.length / itemsPerPage);
+        const startIndex = (page - 1) * itemsPerPage;
+        const endIndex = startIndex + itemsPerPage;
+        const paginatedNews = filteredNews.slice(startIndex, endIndex);
 
-    paginatedNews.forEach((news, index) => {
-        if (index === 2) {
+        // Render berita
+        paginatedNews.forEach((news, index) => {
             // Tambahkan iklan setelah 2 berita
-            newsContainer.innerHTML += `
-                <div class="ad-container ad-in-article">
-                    <ins class="adsbygoogle"
-                        style="display:block; text-align:center;"
-                        data-ad-layout="in-article"
-                        data-ad-format="fluid"
-                        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                        data-ad-slot="XXXXXXXXXX"></ins>
+            if (index === 2) {
+                newsContainer.innerHTML += `
+                    <div class="ad-container ad-in-article">
+                        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9929235380686780"
+                            crossorigin="anonymous"></script>
+                        <ins class="adsbygoogle"
+                            style="display:block; text-align:center;"
+                            data-ad-layout="in-article"
+                            data-ad-format="fluid"
+                            data-ad-client="ca-pub-9929235380686780"
+                            data-ad-slot="5678901234"></ins>
+                        <script>
+                            (adsbygoogle = window.adsbygoogle || []).push({});
+                        </script>
+                    </div>
+                `;
+            }
+
+            const newsItem = document.createElement('div');
+            newsItem.classList.add('news-item');
+            newsItem.innerHTML = `
+                ${news.image ? `<img src="${news.image}" alt="${news.title}" loading="lazy">` : ''}
+                <div class="content">
+                    <h2>${news.title}</h2>
+                    <p>${news.description}</p>
+                    <p><strong>Tanggal:</strong> ${news.date}</p>
+                    <p><strong>Penulis:</strong> ${news.author || 'Tidak diketahui'}</p>
+                    <p><strong>Kategori:</strong> ${news.category}</p>
+                    <a href="${news.link}" target="_blank">Baca selengkapnya</a>
+                    <div class="share-buttons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(news.link)}" 
+                           target="_blank" 
+                           class="share-facebook">Facebook</a>
+                        <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(news.title)}&url=${encodeURIComponent(news.link)}" 
+                           target="_blank" 
+                           class="share-twitter">Twitter</a>
+                        <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(news.title + " " + news.link)}" 
+                           target="_blank" 
+                           class="share-whatsapp">WhatsApp</a>
+                    </div>
                 </div>
             `;
-            (adsbygoogle = window.adsbygoogle || []).push({});
-        }
+            newsContainer.appendChild(newsItem);
+        });
 
-        const newsItem = document.createElement('div');
-        newsItem.classList.add('news-item');
-        const newsImage = news.image ? `<img src="${news.image}" alt="${news.title}" loading="lazy">` : '';
-        const newsContent = `
-            ${newsImage}
-            <div class="content">
-                <h2>${news.title}</h2>
-                <p>${news.description}</p>
-                <p><strong>Tanggal:</strong> ${news.date}</p>
-                <p><strong>Penulis:</strong> ${news.author || 'Tidak diketahui'}</p>
-                <p><strong>Kategori:</strong> ${news.category}</p>
-                <a href="${news.link}" target="_blank">Baca selengkapnya</a>
-                <div class="share-buttons">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(news.link)}" target="_blank" class="share-facebook">Facebook</a>
-                    <a href="https://twitter.com/intent/tweet?text=${encodeURIComponent(news.title)}&url=${encodeURIComponent(news.link)}" target="_blank" class="share-twitter">Twitter</a>
-                    <a href="https://api.whatsapp.com/send?text=${encodeURIComponent(news.title + " " + news.link)}" target="_blank" class="share-whatsapp">WhatsApp</a>
-                </div>
-            </div>
-        `;
-        newsItem.innerHTML = newsContent;
-        newsContainer.appendChild(newsItem);
-    });
-
-    renderPagination(totalPages, page);
+        renderPagination(totalPages, page);
+    }, 500); // Simulasi loading 0.5 detik
 }
 
-// Fungsi untuk merender tombol pagination
+// Fungsi pagination
 function renderPagination(totalPages, currentPage = 1) {
-    const paginationContainer = document.getElementById('pagination');
-    paginationContainer.innerHTML = "";
+    const pagination = document.getElementById('pagination');
+    pagination.innerHTML = "";
 
     if (totalPages <= 1) return;
 
+    // Tombol Previous
     const prevButton = document.createElement('button');
-    prevButton.textContent = "Previous";
+    prevButton.textContent = "Sebelumnya";
     prevButton.disabled = currentPage === 1;
     prevButton.addEventListener('click', () => {
-        const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
-        const searchQuery = document.getElementById('search-input').value;
-        displayNews(activeCategory, searchQuery, currentPage - 1);
+        handlePagination(currentPage - 1);
     });
-    paginationContainer.appendChild(prevButton);
+    pagination.appendChild(prevButton);
 
-    const maxPagesToShow = 5;
-    let startPage = Math.max(1, currentPage - Math.floor(maxPagesToShow / 2));
-    let endPage = Math.min(totalPages, startPage + maxPagesToShow - 1);
-
-    if (endPage - startPage + 1 < maxPagesToShow) {
-        startPage = Math.max(1, endPage - maxPagesToShow + 1);
-    }
-
-    for (let i = startPage; i <= endPage; i++) {
+    // Nomor halaman
+    for (let i = 1; i <= totalPages; i++) {
         const button = document.createElement('button');
         button.textContent = i;
-        if (i === currentPage) {
-            button.classList.add('active');
-        }
-        button.addEventListener('click', () => {
-            const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
-            const searchQuery = document.getElementById('search-input').value;
-            displayNews(activeCategory, searchQuery, i);
-        });
-        paginationContainer.appendChild(button);
+        if (i === currentPage) button.classList.add('active');
+        button.addEventListener('click', () => handlePagination(i));
+        pagination.appendChild(button);
     }
 
+    // Tombol Next
     const nextButton = document.createElement('button');
-    nextButton.textContent = "Next";
+    nextButton.textContent = "Selanjutnya";
     nextButton.disabled = currentPage === totalPages;
     nextButton.addEventListener('click', () => {
-        const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
-        const searchQuery = document.getElementById('search-input').value;
-        displayNews(activeCategory, searchQuery, currentPage + 1);
+        handlePagination(currentPage + 1);
     });
-    paginationContainer.appendChild(nextButton);
+    pagination.appendChild(nextButton);
 }
 
-// Hamburger Menu Toggle
-document.getElementById('menu-toggle').addEventListener('click', () => {
-    const nav = document.getElementById('main-nav');
-    nav.classList.toggle('active');
-});
-
-// Tutup menu saat mengklik di luar menu
-document.addEventListener('click', (e) => {
-    const nav = document.getElementById('main-nav');
-    const menuToggle = document.getElementById('menu-toggle');
-
-    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-        nav.classList.remove('active');
-    }
-});
-
-// Event listener untuk kategori
-document.querySelectorAll('nav ul li a').forEach(link => {
-    link.addEventListener('click', (e) => {
-        e.preventDefault();
-        const category = e.target.getAttribute('data-category');
-        setActiveCategory(category);
-        currentPage = 1;
-        displayNews(category);
-    });
-});
-
-// Fungsi untuk mengatur kategori aktif
-function setActiveCategory(category) {
-    const navLinks = document.querySelectorAll('nav ul li a');
-    navLinks.forEach(link => link.classList.remove('active'));
-    const activeLink = document.querySelector(`nav ul li a[data-category="${category}"]`);
-    if (activeLink) activeLink.classList.add('active');
-}
-
-// Event listener untuk pencarian
-document.getElementById('search-button').addEventListener('click', () => {
+// Handler pagination
+function handlePagination(newPage) {
+    currentPage = newPage;
+    const activeCategory = document.querySelector('.active[data-category]')?.dataset.category || "all";
     const searchQuery = document.getElementById('search-input').value;
-    const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
+    displayNews(activeCategory, searchQuery, currentPage);
+}
+
+// Search handler
+document.getElementById('search-button').addEventListener('click', () => {
     currentPage = 1;
+    const searchQuery = document.getElementById('search-input').value;
+    const activeCategory = document.querySelector('.active[data-category]')?.dataset.category || "all";
     displayNews(activeCategory, searchQuery, currentPage);
 });
 
-// Event listener untuk input pencarian (jika pengguna menekan Enter)
-document.getElementById('search-input').addEventListener('keypress', (e) => {
-    if (e.key === "Enter") {
-        const searchQuery = document.getElementById('search-input').value;
-        const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
-        currentPage = 1;
-        displayNews(activeCategory, searchQuery, currentPage);
-    }
-});
-
-// Event listener untuk infinite scroll
+// Infinite scroll
 window.addEventListener('scroll', () => {
     if (isLoading) return;
-
+    
     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
     if (scrollTop + clientHeight >= scrollHeight - 10) {
         isLoading = true;
         currentPage++;
-        loadMoreNews();
+        const searchQuery = document.getElementById('search-input').value;
+        const activeCategory = document.querySelector('.active[data-category]')?.dataset.category || "all";
+        displayNews(activeCategory, searchQuery, currentPage, true);
+        isLoading = false;
     }
 });
 
-function loadMoreNews() {
-    const activeCategory = document.querySelector('nav ul li a.active')?.getAttribute('data-category') || "all";
-    const searchQuery = document.getElementById('search-input').value;
-    displayNews(activeCategory, searchQuery, currentPage, true);
-    isLoading = false;
-}
-
-// Event listener untuk dark mode
+// Dark mode toggle
 document.getElementById('theme-toggle').addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
 });
 
-// Event listener untuk back to top button
+// Back to top button
 window.addEventListener('scroll', () => {
-    const backToTopButton = document.getElementById('back-to-top');
-    if (window.scrollY > 300) {
-        backToTopButton.classList.add('visible');
-    } else {
-        backToTopButton.classList.remove('visible');
-    }
+    const backToTop = document.getElementById('back-to-top');
+    backToTop.classList.toggle('visible', window.scrollY > 300);
 });
 
 document.getElementById('back-to-top').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Jalankan fungsi saat halaman dimuat
+// Hamburger menu
+document.getElementById('menu-toggle').addEventListener('click', () => {
+    document.getElementById('main-nav').classList.toggle('active');
+});
+
+// Kategori handler
+document.querySelectorAll('[data-category]').forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.querySelectorAll('[data-category]').forEach(l => l.classList.remove('active'));
+        e.target.classList.add('active');
+        currentPage = 1;
+        displayNews(e.target.dataset.category);
+    });
+});
+
+// Inisialisasi AdSense
+(adsbygoogle = window.adsbygoogle || []).push({});
+
+// Jalankan saat pertama kali load
 window.onload = () => {
     displayNews();
-    setActiveCategory("all");
-    (adsbygoogle = window.adsbygoogle || []).push({});
+    document.querySelector('[data-category="all"]').classList.add('active');
 };
